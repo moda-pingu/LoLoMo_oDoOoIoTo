@@ -1,0 +1,53 @@
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python cache and tooling
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+MYVENV/
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Local app state and generated outputs
+PYLLM_NOTE/PYLLM_StreamLit/chat_history/
+PY_DoitLLM_Solution/**/output/
+PY_DoitLLM_Solution/**/data/state.json
+*.log
+*.tmp
+
+# Media / document artifacts often generated during experiments
+*.docx
+
+# Ignore Solution
+PY_DoitLLM_Solution/
