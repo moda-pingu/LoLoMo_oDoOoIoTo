@@ -67,3 +67,9 @@ def add_numbers(first_number: int, second_number: int) -> str:
     2. docstring은 add_numbers.__doc__
     3. 타입 힌트는 add_numbers.__annotations__
     4. 파라미터 이름과 순서는 inspect.signature()
+
+# ToolMassage
+SystemMessage: 모델의 규칙/역할 설정
+HumanMessage: 사용자 입력
+AIMessage: 모델의 응답
+ToolMessage: 도구 실행 결과

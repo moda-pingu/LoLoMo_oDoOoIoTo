@@ -152,7 +152,7 @@ def reverse_text(text: str) -> str:
 # TOOLS:
 #   모델에 바인딩(bind)할 전체 도구 목록이다.
 #   여기 리스트에 들어 있는 함수만 모델이 tool call 대상으로 인식할 수 있다.
-TOOLS = [add_numbers, multiply_numbers, reverse_text]
+MY_TOOLS = [add_numbers, multiply_numbers, reverse_text]
 
 
 # ---------------------------------------------------------------------------
@@ -259,7 +259,7 @@ def generate(state: State):
     # bind_tools:
     #   모델에게 "이런 도구들이 있다"라고 알려주는 과정이다.
     #   이 설정을 해야 모델이 tool_calls를 포함한 응답을 생성할 수 있다.
-    model_with_tools = model.bind_tools(TOOLS)
+    model_with_tools = model.bind_tools(MY_TOOLS)
 
     # SystemMessage는 init_system 노드가, HumanMessage는 add_user_message 노드가
     # 이미 messages에 추가해두었다.
@@ -432,7 +432,7 @@ def build_graph(checkpointer=None):
 
     # "tools" 노드:
     #   실제 tool을 실행하는 노드
-    graph_builder.add_node("tools", BasicToolNode(TOOLS))
+    graph_builder.add_node("tools", BasicToolNode(MY_TOOLS))
 
     # 시작점은 시스템 초기화 노드로 연결한다.
     # 그래프는 먼저 시스템 프롬프트를 세팅하고,
