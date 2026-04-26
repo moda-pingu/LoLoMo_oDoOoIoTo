@@ -18,7 +18,7 @@ __pycache__/
 htmlcov/
 
 # Virtual environments
-MYVENV/
+0_VENV/
 .venv/
 venv/
 env/
@@ -40,9 +40,10 @@ dist/
 *.egg-info/
 
 # Local app state and generated outputs
-PYLLM_NOTE/PYLLM_StreamLit/chat_history/
-PY_DoitLLM_Solution/**/output/
-PY_DoitLLM_Solution/**/data/state.json
+2_NOTES/PYLLM_StreamLit/chat_history/
+1_SOLUTIONS/**/output/
+1_SOLUTIONS/**/data/state.json
+9_BACKUPS/
 *.log
 *.tmp
 
@@ -50,4 +51,4 @@ PY_DoitLLM_Solution/**/data/state.json
 *.docx
 
 # Ignore Solution
-PY_DoitLLM_Solution/
+1_SOLUTIONS/
